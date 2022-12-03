@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leafie</title>
+    <link rel="stylesheet" href="./Project.css">
+    
+</head>
+
+<body>
+    <style>
+        body {
+    background-image: url(./bg.jpg);
+  }
+    </style>
+        
+    <input type="radio" name="Image" id = "check1" checked>
+    <input type="radio" name="Image" id = "check2" >
+    <input type="radio" name="Image" id = "check3" >
+    <input type="radio" name="Image" id = "check4" >
+    <input type="radio" name="Image" id = "check5" >
+ 
+<div class ="container">
+    <h1>Leafie</h1>
+    <br>
+    <div class = "top-content">
+        <h3>Photo Album</h3>
+    <label for="check1">ALL Photos</label>
+    <label for="check2">Family Photo</label>
+    <label for="check3">Child Photo</label>
+    <label for="check4">Holiday</label>
+    <label for="check5">Architecture</label>
+</div>
+<div class="full-img" id="fullImgBox">
+<img src="img1.jpg" id="fullImg">
+<span onclick="closeFullImg()">Close</span>
+</div>
+<div class="Photo-gallery">
+<div class = "pic place">
+<img src="./place1.jpeg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family5.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child3.jpeg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc1.webp" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic place">
+<img src="./place2.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family1.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child4.jpeg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc2.webp" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic place">
+<img src="./place3.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family2.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child5.webp" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc3.jpg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic place">
+<img src="./place4.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family3.webp" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child1.jpg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc4.webp" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic place">
+<img src="./place5.webp" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family4.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child2.jpg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc5.jpg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic place">
+<img src="./place6.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family6.jpeg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child6.jpg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc6.jpg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic place">
+<img src="./place7.webp" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family7.jpeg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child7.jpeg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc7.webp" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic place">
+<img src="./place8.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic family">
+<img src="./family8.jpg" onclick="openFullImg(this.src)">  
+</div>
+<div class = "pic Child">
+<img src="./child8.jpg" onclick="openFullImg(this.src)">
+</div>
+<div class = "pic Architecture">
+<img src="./arc8.jpg" onclick="openFullImg(this.src)">
+</div>
+</div>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(Pic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = Pic;
+        }
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+    </script>
+
+<footer>
+    <p>CONTACT INFO</p>
+    <p><a href="mailto:hege@example.com">Leafie@gmail.com</a></p>
+  </footer>
+  
+</body>
+</html>

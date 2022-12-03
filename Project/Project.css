@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-weight: normal;
+    font-size: 70px;
+    position: relative;
+    color: rgb(49, 211, 211);
+}
+h1::before{
+    
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: animate 4s linear infinite;
+    
+}
+@keyframes animate {
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.top-content{
+    background-color: lightgray;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgb(170, 166, 166);
+}
+h3{
+    height: 100%;
+    background-color:rgb(14, 128, 165);
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+
+}
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 40px;
+    line-height: 60px;
+    font-size: 18px;
+    color: rgb(114, 111, 112);
+    cursor: pointer;
+    transition: color .5s;
+
+
+}
+label:hover{
+    color: black;
+
+}
+
+.Background-image{
+    background-image: url(./bg2.avif);
+    background-size: cover;
+    height:200vh;
+}
+.Photo-gallery{
+    width: 90%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 50px;
+}
+.Photo-gallery .pic{
+    width: 100%;
+    cursor: pointer;
+    border: 4px chocolate;
+}
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px lightgray;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+.pic::before{
+    content: "Leafie";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.pic::after{
+    content: "";
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(0,0,0,0.4);
+    transition: .3s; 
+ }
+ .pic:hover::after{
+    height: 100%;
+ }
+ .pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+ }
+ #check1:checked ~ .container .Photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .0s;
+ }
+ #check2:checked ~ .container .Photo-gallery .family{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+ }
+ #check2:checked ~ .container .Photo-gallery .Child,
+ #check2:checked ~ .container .Photo-gallery .place,
+ #check2:checked ~ .container .Photo-gallery .Architecture{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+ }
+ #check3:checked ~ .container .Photo-gallery .Child{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+ }
+ #check3:checked ~ .container .Photo-gallery .family,
+ #check3:checked ~ .container .Photo-gallery .place,
+ #check3:checked ~ .container .Photo-gallery .Architecture{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+ }
+ #check4:checked ~ .container .Photo-gallery .place{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+ }
+ #check4:checked ~ .container .Photo-gallery .family,
+ #check4:checked ~ .container .Photo-gallery .Child,
+ #check4:checked ~ .container .Photo-gallery .Architecture{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+ }
+#check5:checked ~ .container .Photo-gallery .Architecture{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+ } 
+ #check5:checked ~ .container .Photo-gallery .Child,
+ #check5:checked ~ .container .Photo-gallery .family,
+ #check5:checked ~ .container .Photo-gallery .place
+ {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+ }
+ 
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+}
+.full-img img{
+    width:90%;
+    max-width: 600px;
+}
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px ;
+    color: white;
+    cursor: pointer;
+
+}
+footer{
+    text-align: center;
+  padding: 7px;
+  background-color: rgb(49, 211, 211);
+  color: white;
+}
